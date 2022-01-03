@@ -5,10 +5,13 @@ import {
 } from "react-router-dom";
 import Home from "./routes/Home";
 import Detail from "./routes/Detail";
+import Header from "./component/Header";
+import Footer from "./component/Footer";
 
 export default function App() {
   return (
   <Router>
+    <Header/>
     <Switch>
       <Route path="/movie/:id">
         <Detail />
@@ -17,6 +20,7 @@ export default function App() {
         <Home />
       </Route>
     </Switch>
+    <Footer/>
   </Router>
   )
 }
